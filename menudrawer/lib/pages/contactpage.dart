@@ -1,7 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ContactPage extends StatelessWidget {
   const ContactPage({super.key});
+
+  Future<void> _openIg() async {
+    final Uri url = Uri.parse("https://www.instagram.com/nandarasyy");
+    if (await canLaunchUrl(url)) {
+      await launchUrl(
+        url,
+        mode: LaunchMode.externalApplication,
+      );
+    }
+  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -30,11 +42,11 @@ class ContactPage extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(15),
               ),
-              child: const Padding(
-                padding: EdgeInsets.symmetric(vertical: 8.0),
+              child: Padding(
+                padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Column(
                   children: [
-                    ListTile(
+                    const ListTile(
                       leading: Icon(Icons.location_on, color: Color(0xFF023E8A)),
                       title: Text(
                         'Basecamp & Lokasi Trip',
@@ -42,8 +54,8 @@ class ContactPage extends StatelessWidget {
                       ),
                       subtitle: Text('Ancol, Jakarta / Labuan Bajo'),
                     ),
-                    Divider(color: Color(0xFFBAE6FD)),
-                    ListTile(
+                    const Divider(color: Color(0xFFBAE6FD)),
+                    const ListTile(
                       leading: Icon(Icons.phone, color: Color(0xFF0077B6)),
                       title: Text(
                         'WhatsApp',
@@ -51,8 +63,8 @@ class ContactPage extends StatelessWidget {
                       ),
                       subtitle: Text('08888888888888'),
                     ),
-                    Divider(color: Color(0xFFBAE6FD)),
-                    ListTile(
+                    const Divider(color: Color(0xFFBAE6FD)),
+                    const ListTile(
                       leading: Icon(Icons.email_outlined, color: Color(0xFF023E8A)),
                       title: Text(
                         'Email Resmi',
@@ -60,17 +72,18 @@ class ContactPage extends StatelessWidget {
                       ),
                       subtitle: Text('info@oceantripadventure.com'),
                     ),
-                    Divider(color: Color(0xFFBAE6FD)),
+                    const Divider(color: Color(0xFFBAE6FD)),
                     ListTile(
-                      leading: Icon(Icons.camera_alt_outlined, color: Color(0xFF0077B6)),
-                      title: Text(
+                      leading: const Icon(Icons.camera_alt_outlined, color: Color(0xFF0077B6)),
+                      title: const Text(
                         'Instagram',
                         style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
                       ),
-                      subtitle: Text('@nandarasyy'),
+                      subtitle: const Text('@nandarasyy'),
+                      onTap: _openIg,
                     ),
-                    Divider(color: Color(0xFFBAE6FD)),
-                    ListTile(
+                    const Divider(color: Color(0xFFBAE6FD)),
+                    const ListTile(
                       leading: Icon(Icons.access_time_outlined, color: Color(0xFF023E8A)),
                       title: Text(
                         'Jadwal Keberangkatan Trip',
