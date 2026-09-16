@@ -148,7 +148,7 @@ class BerandaPage extends StatelessWidget {
                   ),
                   SizedBox(height: 15),
                   Text(
-                    "Welcome To My Portofolio",
+                    "Selamat Datang di Portofolio Saya",
                     style: TextStyle(
                       fontSize: 20,
                       fontWeight: FontWeight.bold,
@@ -158,7 +158,7 @@ class BerandaPage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Ananda Rachmatu",
+                    "Ananda Rachmatu Oktasurya",
                     style: TextStyle(
                       fontSize: 16,
                       color: Color(0xFFBAE6FD),
@@ -167,7 +167,7 @@ class BerandaPage extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    "Siswa RPL di SMKN 64 Jakarta\nJunior Flutter & Mobile Developer",
+                    "Siswa RPL di SMKN 64 Jakarta",
                     style: TextStyle(
                       fontSize: 13,
                       color: Colors.white70,
