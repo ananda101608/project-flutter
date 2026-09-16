@@ -41,3 +41,6 @@ migrate_working_dir/
 **/Pods/
 **/.symlinks/
 **/flutter_export_environment.sh
+
+# Test projects
+portonandauji/
