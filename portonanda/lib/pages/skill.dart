@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import '../widgets/custom_drawer.dart';
 
 class SkillPage extends StatelessWidget {
   const SkillPage({super.key});
@@ -7,19 +6,13 @@ class SkillPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xFFF8FAFC),
       appBar: AppBar(
-        title: const Text('Skill & Keahlian'),
+        title: const Text("Skill"),
         backgroundColor: const Color(0xFF0F172A),
         foregroundColor: Colors.white,
-        centerTitle: true,
       ),
-      drawer: const CustomDrawer(currentPage: 'skill'),
       body: const Center(
-        child: Text(
-          'Halaman Skill (Akan dikerjakan berikutnya)',
-          style: TextStyle(fontSize: 16, color: Color(0xFF64748B)),
-        ),
+        child: Text("Halaman Skill"),
       ),
     );
   }

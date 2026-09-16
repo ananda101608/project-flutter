@@ -16,19 +16,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Portofolio Ananda',
-      theme: ThemeData(
-        useMaterial3: true,
-        fontFamily: 'Roboto',
-        colorScheme: ColorScheme.fromSeed(
-          seedColor: const Color(0xFF1E3A8A),
-          primary: const Color(0xFF1E3A8A),
-        ),
-        scaffoldBackgroundColor: const Color(0xFFF8FAFC),
-      ),
-      initialRoute: '/',
+      title: 'Portofolio Nanda',
+      home: const BerandaPage(),
       routes: {
-        '/': (context) => const BerandaPage(),
         '/profile': (context) => const ProfilePage(),
         '/skill': (context) => const SkillPage(),
         '/project': (context) => const ProjectPage(),
