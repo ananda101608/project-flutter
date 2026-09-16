@@ -67,7 +67,7 @@ class ProjectPage extends StatelessWidget {
                   ),
                   SizedBox(height: 6),
                   Text(
-                    "Kumpulan aplikasi mobile Flutter, website, dan tugas kejuruan RPL yang telah saya kembangkan beserta link kodenya di GitHub.",
+                    "Kumpulan aplikasi Flutter, website, dan tugas kejuruan RPL yang telah saya kembangkan beserta link kodenya di GitHub.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 13,
@@ -79,203 +79,570 @@ class ProjectPage extends StatelessWidget {
               ),
             ),
 
-            // Project 1: Portofolio Nanda (Flutter)
-            _buildProjectCard(
-              title: "Portofolio Nanda",
-              tech: "Flutter • Dart",
-              description:
-                  "Aplikasi portofolio pribadi dengan navigasi Drawer, integrasi halaman keahlian, showcase project, dan kontak sosial media.",
-              icon: Icons.flutter_dash,
-              iconColor: const Color(0xFF0284C7),
-              iconBgColor: const Color(0xFFE0F2FE),
-              githubUrl: "https://github.com/ananda101608/project-flutter",
-            ),
-
-            // Project 2: Ocean Trip Adventure
-            _buildProjectCard(
-              title: "Ocean Trip Adventure",
-              tech: "Flutter • Dart • Url Launcher",
-              description:
-                  "Aplikasi paket wisata diving dan trip eksplorasi bawah laut dengan tema Ocean Blue, navigasi menu drawer, galeri, dan kontak reservasi.",
-              icon: Icons.scuba_diving,
-              iconColor: const Color(0xFF023E8A),
-              iconBgColor: const Color(0xFFBAE6FD),
-              githubUrl: "https://github.com/ananda101608/project-scuba",
-            ),
-
-            // Project 3: KKS Company Profile
-            _buildProjectCard(
-              title: "KKS Company Profile",
-              tech: "Flutter • Dart • OOP",
-              description:
-                  "Aplikasi profil perusahaan IT bernuansa Dark Theme dengan fitur galeri fasilitas, layanan unggulan, serta form ulasan & testimoni interaktif.",
-              icon: Icons.business,
-              iconColor: Colors.orange,
-              iconBgColor: const Color(0xFFFFEDD5),
-              githubUrl: "https://github.com/ananda101608/flutter_profil_perusahaan",
-            ),
-
-            // Project 4: Pendaftaran Ekstrakurikuler SMKN 64
-            _buildProjectCard(
-              title: "Aplikasi Ekstrakurikuler SMKN 64",
-              tech: "Flutter • Dart • Form Validation",
-              description:
-                  "Aplikasi pendaftaran ekstrakurikuler sekolah dengan seleksi multi-eskul, validasi data siswa, dan halaman kartu hasil pendaftaran.",
-              icon: Icons.school,
-              iconColor: const Color(0xFF166534),
-              iconBgColor: const Color(0xFFDCFCE7),
-              githubUrl: "https://github.com/ananda101608/project-flutter",
-            ),
-
-            // Project 5: Form Data Karyawan
-            _buildProjectCard(
-              title: "Form Data Karyawan",
-              tech: "Flutter • Dart • State Management",
-              description:
-                  "Aplikasi form input data lengkap dengan validasi teks, dropdown divisi, pilihan radio button gender & status kerja, serta checkbox pernyataan.",
-              icon: Icons.assignment,
-              iconColor: const Color(0xFF0D9488),
-              iconBgColor: const Color(0xFFCCFBF1),
-              githubUrl: "https://github.com/ananda101608/project-flutter",
-            ),
-
-            // Project 6: Lost and Foundit SMKN 64
-            _buildProjectCard(
-              title: "Lost and Foundit SMKN 64",
-              tech: "Web • HTML • CSS • JavaScript",
-              description:
-                  "Website sistem informasi untuk mencari dan melaporkan barang hilang di lingkungan sekolah SMK Negeri 64 Jakarta.",
-              icon: Icons.search,
-              iconColor: const Color(0xFFEA580C),
-              iconBgColor: const Color(0xFFFFEDD5),
-              githubUrl: "https://github.com/ananda101608/lost-and-foundit",
-            ),
-
-            // Project 7: Bootstrap CV
-            _buildProjectCard(
-              title: "Website CV Bootstrap",
-              tech: "HTML5 • CSS3 • Bootstrap",
-              description:
-                  "Website curriculum vitae digital interaktif dan responsif yang dibangun menggunakan framework CSS Bootstrap.",
-              icon: FontAwesomeIcons.bootstrap,
-              iconColor: const Color(0xFF7952B3),
-              iconBgColor: const Color(0xFFF3E8FF),
-              githubUrl: "https://github.com/ananda101608/bootstrap-cv",
-            ),
-
-            // Project 8: Sistem Informasi Perpustakaan
-            _buildProjectCard(
-              title: "Sistem Informasi Perpustakaan",
-              tech: "Web • PHP • Database",
-              description:
-                  "Aplikasi web manajemen perpustakaan sekolah untuk pengelolaan data buku, peminjaman, dan pengembalian siswa.",
-              icon: Icons.menu_book,
-              iconColor: const Color(0xFF4F46E5),
-              iconBgColor: const Color(0xFFEEF2FF),
-              githubUrl: "https://github.com/ananda101608/ulangan-pak-krisna-perpus-",
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  // Widget Kartu Project Reusable
-  Widget _buildProjectCard({
-    required String title,
-    required String tech,
-    required String description,
-    required IconData icon,
-    required Color iconColor,
-    required Color iconBgColor,
-    required String githubUrl,
-  }) {
-    return Card(
-      elevation: 2,
-      margin: const EdgeInsets.only(bottom: 16),
-      color: Colors.white,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(14),
-      ),
-      child: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            // Bagian Atas: Icon, Judul & Tag Teknologi
-            Row(
-              children: [
-                CircleAvatar(
-                  radius: 24,
-                  backgroundColor: iconBgColor,
-                  child: Icon(icon, color: iconColor, size: 24),
-                ),
-                const SizedBox(width: 14),
-                Expanded(
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        title,
-                        style: const TextStyle(
-                          fontSize: 16,
-                          fontWeight: FontWeight.bold,
-                          color: Color(0xFF0F172A),
+            // 1. Project: Portofolio Nanda
+            Card(
+              elevation: 2,
+              margin: const EdgeInsets.only(bottom: 16),
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Color(0xFFE0F2FE),
+                          child: Icon(Icons.flutter_dash, color: Color(0xFF0284C7)),
+                        ),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Portofolio Nanda",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Flutter • Dart",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Aplikasi portofolio pribadi dengan navigasi Drawer, integrasi halaman keahlian, showcase project, dan kontak.",
+                      style: TextStyle(fontSize: 13, height: 1.4),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          _openUrl("https://github.com/ananda101608/project-flutter");
+                        },
+                        icon: const Icon(FontAwesomeIcons.github, size: 18),
+                        label: const Text("Lihat di GitHub"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF023E8A),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
                         ),
                       ),
-                      const SizedBox(height: 3),
-                      Text(
-                        tech,
-                        style: const TextStyle(
-                          fontSize: 12,
-                          color: Color(0xFF64748B),
-                          fontWeight: FontWeight.w500,
-                        ),
-                      ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
-              ],
-            ),
-
-            const SizedBox(height: 12),
-
-            // Deskripsi Project
-            Text(
-              description,
-              style: const TextStyle(
-                fontSize: 13,
-                color: Color(0xFF334155),
-                height: 1.4,
               ),
             ),
 
-            const SizedBox(height: 14),
+            // 2. Project: Ocean Trip Adventure
+            Card(
+              elevation: 2,
+              margin: const EdgeInsets.only(bottom: 16),
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Color(0xFFBAE6FD),
+                          child: Icon(Icons.scuba_diving, color: Color(0xFF023E8A)),
+                        ),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Ocean Trip Adventure",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Flutter • Dart • Url Launcher",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Aplikasi paket wisata diving dan trip bawah laut dengan tema Ocean Blue, navigasi menu drawer, galeri, dan kontak reservasi.",
+                      style: TextStyle(fontSize: 13, height: 1.4),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          _openUrl("https://github.com/ananda101608/project-scuba");
+                        },
+                        icon: const Icon(FontAwesomeIcons.github, size: 18),
+                        label: const Text("Lihat di GitHub"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF023E8A),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
 
-            // Tombol Lihat di GitHub
-            SizedBox(
-              width: double.infinity,
-              child: ElevatedButton.icon(
-                onPressed: () => _openUrl(githubUrl),
-                icon: const Icon(
-                  FontAwesomeIcons.github,
-                  size: 18,
+            // 3. Project: KKS Company Profile
+            Card(
+              elevation: 2,
+              margin: const EdgeInsets.only(bottom: 16),
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Color(0xFFFFEDD5),
+                          child: Icon(Icons.business, color: Colors.orange),
+                        ),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "KKS Company Profile",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Flutter • Dart • OOP",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Aplikasi profil perusahaan IT bernuansa Dark Theme dengan fitur galeri fasilitas, layanan unggulan, serta form ulasan & testimoni interaktif.",
+                      style: TextStyle(fontSize: 13, height: 1.4),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          _openUrl("https://github.com/ananda101608/flutter_profil_perusahaan");
+                        },
+                        icon: const Icon(FontAwesomeIcons.github, size: 18),
+                        label: const Text("Lihat di GitHub"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF023E8A),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                label: const Text(
-                  "Lihat di GitHub",
-                  style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 14,
-                  ),
+              ),
+            ),
+
+            // 4. Project: Aplikasi Ekstrakurikuler SMKN 64
+            Card(
+              elevation: 2,
+              margin: const EdgeInsets.only(bottom: 16),
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Color(0xFFDCFCE7),
+                          child: Icon(Icons.school, color: Color(0xFF166534)),
+                        ),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Aplikasi Ekstrakurikuler SMKN 64",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Flutter • Dart • Form Validation",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Aplikasi pendaftaran ekstrakurikuler sekolah dengan seleksi multi-eskul, validasi data siswa, dan halaman kartu hasil pendaftaran.",
+                      style: TextStyle(fontSize: 13, height: 1.4),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          _openUrl("https://github.com/ananda101608/project-flutter");
+                        },
+                        icon: const Icon(FontAwesomeIcons.github, size: 18),
+                        label: const Text("Lihat di GitHub"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF023E8A),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                style: ElevatedButton.styleFrom(
-                  backgroundColor: const Color(0xFF023E8A),
-                  foregroundColor: Colors.white,
-                  padding: const EdgeInsets.symmetric(vertical: 12),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  elevation: 1,
+              ),
+            ),
+
+            // 5. Project: Form Data Karyawan
+            Card(
+              elevation: 2,
+              margin: const EdgeInsets.only(bottom: 16),
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Color(0xFFCCFBF1),
+                          child: Icon(Icons.assignment, color: Color(0xFF0D9488)),
+                        ),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Form Data Karyawan",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Flutter • Dart • State Management",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Aplikasi form input data lengkap dengan validasi teks, dropdown divisi, pilihan radio button gender & status kerja, serta checkbox pernyataan.",
+                      style: TextStyle(fontSize: 13, height: 1.4),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          _openUrl("https://github.com/ananda101608/project-flutter");
+                        },
+                        icon: const Icon(FontAwesomeIcons.github, size: 18),
+                        label: const Text("Lihat di GitHub"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF023E8A),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // 6. Project: Lost and Foundit SMKN 64
+            Card(
+              elevation: 2,
+              margin: const EdgeInsets.only(bottom: 16),
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Color(0xFFFFEDD5),
+                          child: Icon(Icons.search, color: Color(0xFFEA580C)),
+                        ),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Lost and Foundit SMKN 64",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Web • HTML • CSS • JavaScript",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Website sistem informasi untuk mencari dan melaporkan barang hilang di lingkungan sekolah SMK Negeri 64 Jakarta.",
+                      style: TextStyle(fontSize: 13, height: 1.4),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          _openUrl("https://github.com/ananda101608/lost-and-foundit");
+                        },
+                        icon: const Icon(FontAwesomeIcons.github, size: 18),
+                        label: const Text("Lihat di GitHub"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF023E8A),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // 7. Project: Website CV Bootstrap
+            Card(
+              elevation: 2,
+              margin: const EdgeInsets.only(bottom: 16),
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Color(0xFFF3E8FF),
+                          child: Icon(FontAwesomeIcons.bootstrap, color: Color(0xFF7952B3)),
+                        ),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Website CV Bootstrap",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "HTML5 • CSS3 • Bootstrap",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Website curriculum vitae digital interaktif dan responsif yang dibangun menggunakan framework CSS Bootstrap.",
+                      style: TextStyle(fontSize: 13, height: 1.4),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          _openUrl("https://github.com/ananda101608/bootstrap-cv");
+                        },
+                        icon: const Icon(FontAwesomeIcons.github, size: 18),
+                        label: const Text("Lihat di GitHub"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF023E8A),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+
+            // 8. Project: Sistem Informasi Perpustakaan
+            Card(
+              elevation: 2,
+              margin: const EdgeInsets.only(bottom: 16),
+              color: Colors.white,
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const Row(
+                      children: [
+                        CircleAvatar(
+                          backgroundColor: Color(0xFFEEF2FF),
+                          child: Icon(Icons.menu_book, color: Color(0xFF4F46E5)),
+                        ),
+                        SizedBox(width: 12),
+                        Expanded(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Sistem Informasi Perpustakaan",
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                              Text(
+                                "Web • PHP • Database",
+                                style: TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.grey,
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 10),
+                    const Text(
+                      "Aplikasi web manajemen perpustakaan sekolah untuk pengelolaan data buku, peminjaman, dan pengembalian siswa.",
+                      style: TextStyle(fontSize: 13, height: 1.4),
+                    ),
+                    const SizedBox(height: 12),
+                    SizedBox(
+                      width: double.infinity,
+                      child: ElevatedButton.icon(
+                        onPressed: () {
+                          _openUrl("https://github.com/ananda101608/ulangan-pak-krisna-perpus-");
+                        },
+                        icon: const Icon(FontAwesomeIcons.github, size: 18),
+                        label: const Text("Lihat di GitHub"),
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: const Color(0xFF023E8A),
+                          foregroundColor: Colors.white,
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ),
             ),
