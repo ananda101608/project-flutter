@@ -104,7 +104,7 @@ class ContactMePage extends StatelessWidget {
                           fontSize: 15,
                         ),
                       ),
-                      subtitle: Text("0888-8888-8888"),
+                      subtitle: Text("0895-0244-8859"),
                     ),
                     const Divider(color: Color(0xFFBAE6FD)),
 
@@ -141,11 +141,6 @@ class ContactMePage extends StatelessWidget {
                         ),
                       ),
                       subtitle: const Text("@nandarasyy"),
-                      trailing: const Icon(
-                        Icons.open_in_new,
-                        size: 18,
-                        color: Colors.pink,
-                      ),
                       onTap: _openInstagram,
                     ),
                     const Divider(color: Color(0xFFBAE6FD)),
