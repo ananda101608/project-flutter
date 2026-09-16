@@ -157,7 +157,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                   SizedBox(height: 4),
                   Text(
-                    "Siswa RPL • SMKN 64 Jakarta",
+                    "Siswa RPL di SMKN 64 Jakarta",
                     style: TextStyle(
                       fontSize: 14,
                       color: Color(0xFFBAE6FD),
@@ -166,7 +166,7 @@ class ProfilePage extends StatelessWidget {
                   ),
                   SizedBox(height: 4),
                   Text(
-                    "Junior Mobile & Flutter Developer",
+                    "Lagi seru-serunya belajar bikin aplikasi Flutter 🚀",
                     style: TextStyle(
                       fontSize: 12,
                       color: Colors.white70,
@@ -176,7 +176,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
 
-            // Card 1: Latar Belakang (Tentang Saya)
+            // Card 1: Tentang Saya (Bahasa Santai)
             Card(
               elevation: 2,
               margin: const EdgeInsets.only(bottom: 16),
@@ -195,14 +195,14 @@ class ProfilePage extends StatelessWidget {
                           radius: 18,
                           backgroundColor: Color(0xFFE0F2FE),
                           child: Icon(
-                            Icons.person_pin,
+                            Icons.waving_hand,
                             color: Color(0xFF023E8A),
                             size: 20,
                           ),
                         ),
                         SizedBox(width: 10),
                         Text(
-                          "Latar Belakang",
+                          "Kenalan Dulu Yuk!",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -214,7 +214,7 @@ class ProfilePage extends StatelessWidget {
                     Divider(color: Color(0xFFBAE6FD)),
                     SizedBox(height: 6),
                     Text(
-                      "Halo! Nama saya Ananda Rachmatu, seorang pelajar kejuruan di SMK Negeri 64 Jakarta yang mengambil konsentrasi keahlian Rekayasa Perangkat Lunak (RPL).",
+                      "Halo semuanya! Kenalin, nama saya Ananda Rachmatu. Saya sekarang sekolah di SMK Negeri 64 Jakarta jurusan RPL (Rekayasa Perangkat Lunak).",
                       style: TextStyle(
                         fontSize: 13,
                         color: Color(0xFF334155),
@@ -223,7 +223,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      "Sejak awal mendalami dunia teknologi, saya sangat antusias dengan dunia rekayasa aplikasi. Saya aktif mengasah kemampuan logika pemrograman, perancangan antarmuka pengguna (UI/UX), hingga pembuatan aplikasi mobile multiplatform menggunakan Flutter dan Dart.",
+                      "Awalnya saya penasaran gimana sih caranya bikin aplikasi yang sering kita pakai di HP sehari-hari. Pas mulai nyoba ngoding, ternyata seru banget! Sekarang saya lagi asyik mendalami Flutter buat bikin aplikasi yang tampilannya rapi dan gampang dipakai.",
                       style: TextStyle(
                         fontSize: 13,
                         color: Color(0xFF334155),
@@ -235,7 +235,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
 
-            // Card 2: Hobi & Minat
+            // Card 2: Hobi & Hal yang Disukai
             Card(
               elevation: 2,
               margin: const EdgeInsets.only(bottom: 16),
@@ -254,14 +254,14 @@ class ProfilePage extends StatelessWidget {
                           radius: 18,
                           backgroundColor: Color(0xFFCCFBF1),
                           child: Icon(
-                            Icons.sports_esports,
+                            Icons.favorite,
                             color: Color(0xFF0D9488),
                             size: 20,
                           ),
                         ),
                         SizedBox(width: 10),
                         Text(
-                          "Hobi & Minat",
+                          "Hal yang Saya Sukai",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -276,20 +276,20 @@ class ProfilePage extends StatelessWidget {
                       leading: CircleAvatar(
                         backgroundColor: Color(0xFFE0F2FE),
                         child: Icon(
-                          Icons.code,
+                          Icons.laptop_chromebook,
                           color: Color(0xFF0284C7),
                           size: 20,
                         ),
                       ),
                       title: Text(
-                        "Eksplorasi Coding & Framework",
+                        "Ngulik Kodingan & Bikin Aplikasi",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
                       ),
                       subtitle: Text(
-                        "Mencoba berbagai widget Flutter dan membangun aplikasi latihan baru.",
+                        "Paling senang kalau nemu ide baru terus dicoba bikin langsung jadi aplikasi.",
                         style: TextStyle(fontSize: 12),
                       ),
                     ),
@@ -305,14 +305,14 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ),
                       title: Text(
-                        "Desain Tampilan UI/UX",
+                        "Nata Tampilan Biar Rapi",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
                       ),
                       subtitle: Text(
-                        "Menata warna, tata letak, dan kartu agar aplikasi nyaman dilihat pengguna.",
+                        "Suka milih warna dan nyusun tombol supaya tampilan aplikasi enak dilihat.",
                         style: TextStyle(fontSize: 12),
                       ),
                     ),
@@ -328,14 +328,14 @@ class ProfilePage extends StatelessWidget {
                         ),
                       ),
                       title: Text(
-                        "Petualangan & Olahraga",
+                        "Jalan-jalan & Suasana Laut",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
                       ),
                       subtitle: Text(
-                        "Menyukai aktivitas outdoor dan tema laut yang menginspirasi karya aplikasi saya.",
+                        "Suka cari angin segar di luar buat refreshing, salah satunya terinspirasi bikin tema diving di project saya!",
                         style: TextStyle(fontSize: 12),
                       ),
                     ),
@@ -344,7 +344,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
 
-            // Card 3: Cita-cita & Harapan
+            // Card 3: Cita-cita Saya
             Card(
               elevation: 2,
               margin: const EdgeInsets.only(bottom: 16),
@@ -363,14 +363,14 @@ class ProfilePage extends StatelessWidget {
                           radius: 18,
                           backgroundColor: Color(0xFFFFEDD5),
                           child: Icon(
-                            Icons.flag,
+                            Icons.rocket_launch,
                             color: Color(0xFFEA580C),
                             size: 20,
                           ),
                         ),
                         SizedBox(width: 10),
                         Text(
-                          "Cita-cita & Tujuan",
+                          "Cita-cita Saya",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.bold,
@@ -382,7 +382,7 @@ class ProfilePage extends StatelessWidget {
                     Divider(color: Color(0xFFBAE6FD)),
                     SizedBox(height: 6),
                     Text(
-                      "Cita-cita saya adalah menjadi seorang Mobile Application Developer / Software Engineer profesional yang mampu membangun produk digital berkualitas tinggi serta bermanfaat bagi masyarakat luas.",
+                      "Cita-cita saya pengen jadi Mobile App Developer yang jago. Harapannya nanti bisa bikin aplikasi yang beneran berguna dan bisa ngebantu mempermudah aktivitas banyak orang.",
                       style: TextStyle(
                         fontSize: 13,
                         color: Color(0xFF334155),
@@ -391,7 +391,7 @@ class ProfilePage extends StatelessWidget {
                     ),
                     SizedBox(height: 8),
                     Text(
-                      "Saya berkomitmen untuk terus konsisten belajar, meningkatkan penguasaan arsitektur kode, serta siap berkontribusi secara profesional di industri teknologi digital.",
+                      "Mumpung masih di bangku SMK, saya mau terus nikmati proses belajarnya dan perbanyak karya project!",
                       style: TextStyle(
                         fontSize: 13,
                         color: Color(0xFF334155),
@@ -403,7 +403,7 @@ class ProfilePage extends StatelessWidget {
               ),
             ),
 
-            // Card 4: Ringkasan Biodata Diri
+            // Card 4: Sekilas Info Diri
             Card(
               elevation: 2,
               color: Colors.white,
@@ -420,13 +420,13 @@ class ProfilePage extends StatelessWidget {
                         color: Color(0xFF023E8A),
                       ),
                       title: Text(
-                        "Pendidikan",
+                        "Sekolah",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
                       ),
-                      subtitle: Text("SMK Negeri 64 Jakarta (RPL)"),
+                      subtitle: Text("SMKN 64 Jakarta (Jurusan RPL)"),
                     ),
                     Divider(color: Color(0xFFBAE6FD)),
                     ListTile(
@@ -435,7 +435,7 @@ class ProfilePage extends StatelessWidget {
                         color: Color(0xFF023E8A),
                       ),
                       title: Text(
-                        "Domisili",
+                        "Asal",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
@@ -450,13 +450,13 @@ class ProfilePage extends StatelessWidget {
                         color: Color(0xFF023E8A),
                       ),
                       title: Text(
-                        "Fokus Utama",
+                        "Lagi Fokus Belajar",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 14,
                         ),
                       ),
-                      subtitle: Text("Flutter & Mobile Application Development"),
+                      subtitle: Text("Bikin Aplikasi HP pakai Flutter"),
                     ),
                   ],
                 ),
