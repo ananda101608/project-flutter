@@ -19,6 +19,109 @@ class ProfilePage extends StatelessWidget {
         foregroundColor: Colors.white,
         centerTitle: true,
       ),
+      drawer: Drawer(
+        child: ListView(
+          padding: EdgeInsets.zero,
+          children: [
+            // Drawer Header
+            const DrawerHeader(
+              decoration: BoxDecoration(
+                color: Color(0xFF023E8A),
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  CircleAvatar(
+                    radius: 30,
+                    backgroundColor: Color(0xFFE0F2FE),
+                    child: Icon(
+                      Icons.person,
+                      size: 40,
+                      color: Color(0xFF023E8A),
+                    ),
+                  ),
+                  SizedBox(height: 10),
+                  Text(
+                    "Ananda Rachmatu",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
+                  ),
+                  Text(
+                    "RPL - SMKN 64 Jakarta",
+                    style: TextStyle(
+                      fontSize: 12,
+                      color: Color(0xFFBAE6FD),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            // Menu Beranda
+            ListTile(
+              leading: const Icon(Icons.home, color: Color(0xFF023E8A)),
+              title: const Text(
+                "Beranda",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.popUntil(context, (route) => route.isFirst);
+              },
+            ),
+            // Menu Profile
+            ListTile(
+              leading: const Icon(Icons.person, color: Color(0xFF0284C7)),
+              title: const Text(
+                "Profile",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+              },
+            ),
+            // Menu Skill
+            ListTile(
+              leading: const Icon(Icons.code, color: Color(0xFF059669)),
+              title: const Text(
+                "Skill",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushReplacementNamed(context, '/skill');
+              },
+            ),
+            // Menu Project
+            ListTile(
+              leading: const Icon(Icons.work, color: Color(0xFF2563EB)),
+              title: const Text(
+                "Project",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushReplacementNamed(context, '/project');
+              },
+            ),
+            // Menu Contact Me
+            ListTile(
+              leading: const Icon(Icons.phone, color: Color(0xFFEA580C)),
+              title: const Text(
+                "Contact Me",
+                style: TextStyle(fontWeight: FontWeight.w600),
+              ),
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushReplacementNamed(context, '/contactme');
+              },
+            ),
+          ],
+        ),
+      ),
       body: SingleChildScrollView(
         padding: const EdgeInsets.all(16),
         child: Column(
