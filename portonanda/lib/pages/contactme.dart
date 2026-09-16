@@ -4,39 +4,9 @@ import 'package:url_launcher/url_launcher.dart';
 class ContactMePage extends StatelessWidget {
   const ContactMePage({super.key});
 
-  // Fungsi membuka Instagram
+  // Fungsi membuka Instagram (hanya ini yang bisa diklik)
   Future<void> _openInstagram() async {
     final Uri url = Uri.parse("https://www.instagram.com/nandarasyy");
-    if (await canLaunchUrl(url)) {
-      await launchUrl(
-        url,
-        mode: LaunchMode.externalApplication,
-      );
-    }
-  }
-
-  // Fungsi membuka WhatsApp
-  Future<void> _openWhatsApp() async {
-    final Uri url = Uri.parse("https://wa.me/62888888888888");
-    if (await canLaunchUrl(url)) {
-      await launchUrl(
-        url,
-        mode: LaunchMode.externalApplication,
-      );
-    }
-  }
-
-  // Fungsi membuka Email
-  Future<void> _openEmail() async {
-    final Uri url = Uri.parse("mailto:anandaros64@gmail.com");
-    if (await canLaunchUrl(url)) {
-      await launchUrl(url);
-    }
-  }
-
-  // Fungsi membuka GitHub
-  Future<void> _openGithub() async {
-    final Uri url = Uri.parse("https://github.com/ananda101608");
     if (await canLaunchUrl(url)) {
       await launchUrl(
         url,
@@ -96,7 +66,7 @@ class ContactMePage extends StatelessWidget {
                   ),
                   SizedBox(height: 6),
                   Text(
-                    "Silakan hubungi saya melalui kontak di bawah ini untuk kolaborasi atau diskusi project.",
+                    "Silakan hubungi saya melalui informasi kontak di bawah ini.",
                     textAlign: TextAlign.center,
                     style: TextStyle(
                       fontSize: 13,
@@ -119,55 +89,43 @@ class ContactMePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Column(
                   children: [
-                    // WhatsApp
-                    ListTile(
-                      leading: const Icon(
+                    // WhatsApp (Hanya teks / info, tidak bisa diklik)
+                    const ListTile(
+                      leading: Icon(
                         Icons.phone,
                         color: Color(0xFF25D366),
                         size: 28,
                       ),
-                      title: const Text(
+                      title: Text(
                         "WhatsApp",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
                         ),
                       ),
-                      subtitle: const Text("0888-8888-8888"),
-                      trailing: const Icon(
-                        Icons.open_in_new,
-                        size: 18,
-                        color: Colors.grey,
-                      ),
-                      onTap: _openWhatsApp,
+                      subtitle: Text("0888-8888-8888"),
                     ),
                     const Divider(color: Color(0xFFBAE6FD)),
 
-                    // Email (Gmail)
-                    ListTile(
-                      leading: const Icon(
+                    // Email (Hanya teks / info, tidak bisa diklik)
+                    const ListTile(
+                      leading: Icon(
                         Icons.email,
                         color: Color(0xFFEA4335),
                         size: 28,
                       ),
-                      title: const Text(
+                      title: Text(
                         "Email",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
                         ),
                       ),
-                      subtitle: const Text("anandaros64@gmail.com"),
-                      trailing: const Icon(
-                        Icons.open_in_new,
-                        size: 18,
-                        color: Colors.grey,
-                      ),
-                      onTap: _openEmail,
+                      subtitle: Text("anandaros64@gmail.com"),
                     ),
                     const Divider(color: Color(0xFFBAE6FD)),
 
-                    // Instagram
+                    // Instagram (BISA DIKLIK)
                     ListTile(
                       leading: const Icon(
                         Icons.camera_alt,
@@ -185,33 +143,27 @@ class ContactMePage extends StatelessWidget {
                       trailing: const Icon(
                         Icons.open_in_new,
                         size: 18,
-                        color: Colors.grey,
+                        color: Color(0xFFE1306C),
                       ),
                       onTap: _openInstagram,
                     ),
                     const Divider(color: Color(0xFFBAE6FD)),
 
-                    // GitHub
-                    ListTile(
-                      leading: const Icon(
+                    // GitHub (Hanya teks / info, tidak bisa diklik)
+                    const ListTile(
+                      leading: Icon(
                         Icons.code,
                         color: Color(0xFF0F172A),
                         size: 28,
                       ),
-                      title: const Text(
+                      title: Text(
                         "GitHub",
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
                           fontSize: 15,
                         ),
                       ),
-                      subtitle: const Text("github.com/ananda101608"),
-                      trailing: const Icon(
-                        Icons.open_in_new,
-                        size: 18,
-                        color: Colors.grey,
-                      ),
-                      onTap: _openGithub,
+                      subtitle: Text("github.com/ananda101608"),
                     ),
                   ],
                 ),
