@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ContactMePage extends StatelessWidget {
@@ -78,7 +79,7 @@ class ContactMePage extends StatelessWidget {
               ),
             ),
 
-            // Card Kontak
+            // Card Kontak dengan FontAwesomeIcons
             Card(
               elevation: 2,
               color: Colors.white,
@@ -89,12 +90,12 @@ class ContactMePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 8.0),
                 child: Column(
                   children: [
-                    // WhatsApp (Hanya teks / info, tidak bisa diklik)
+                    // WhatsApp
                     const ListTile(
                       leading: Icon(
-                        Icons.phone,
+                        FontAwesomeIcons.whatsapp,
                         color: Color(0xFF25D366),
-                        size: 28,
+                        size: 26,
                       ),
                       title: Text(
                         "WhatsApp",
@@ -107,12 +108,12 @@ class ContactMePage extends StatelessWidget {
                     ),
                     const Divider(color: Color(0xFFBAE6FD)),
 
-                    // Email (Hanya teks / info, tidak bisa diklik)
+                    // Email (Gmail)
                     const ListTile(
                       leading: Icon(
-                        Icons.email,
+                        FontAwesomeIcons.envelope,
                         color: Color(0xFFEA4335),
-                        size: 28,
+                        size: 24,
                       ),
                       title: Text(
                         "Email",
@@ -125,12 +126,12 @@ class ContactMePage extends StatelessWidget {
                     ),
                     const Divider(color: Color(0xFFBAE6FD)),
 
-                    // Instagram (BISA DIKLIK)
+                    // Instagram (Bisa diklik)
                     ListTile(
                       leading: const Icon(
-                        Icons.camera_alt,
-                        color: Color(0xFFE1306C),
-                        size: 28,
+                        FontAwesomeIcons.instagram,
+                        color: Colors.pink,
+                        size: 26,
                       ),
                       title: const Text(
                         "Instagram",
@@ -143,18 +144,18 @@ class ContactMePage extends StatelessWidget {
                       trailing: const Icon(
                         Icons.open_in_new,
                         size: 18,
-                        color: Color(0xFFE1306C),
+                        color: Colors.pink,
                       ),
                       onTap: _openInstagram,
                     ),
                     const Divider(color: Color(0xFFBAE6FD)),
 
-                    // GitHub (Hanya teks / info, tidak bisa diklik)
+                    // GitHub
                     const ListTile(
                       leading: Icon(
-                        Icons.code,
+                        FontAwesomeIcons.github,
                         color: Color(0xFF0F172A),
-                        size: 28,
+                        size: 26,
                       ),
                       title: Text(
                         "GitHub",
